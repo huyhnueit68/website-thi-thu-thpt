@@ -6,6 +6,8 @@
 -- Generation Time: Nov 14, 2021 at 01:48 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
+-- Author: Pham Quang Huy
+-- Mail: pqhuy2@software.misa.com.vn
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -184,16 +186,48 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`grade_id`, `unit`, `level_id`, `question_content`, `answer_a`, `answer_b`, `answer_c`, `answer_d`, `correct_answer`, `question_id`, `subject_id`, `sent_by`, `status_id`) VALUES
-(12, 2, 2, '<p>Câu hỏi test 01</p>', '<p>h</p>', '<p>j</p>', '<p>k</p>', '<p>l</p>', '<p>k</p>', 3, 1, 'admin', 4),
-(1, 1, 1, '<p>jl</p>', '<p>k</p>', '<p>j</p>', '<p>j</p>', '<p>j</p>', '<p>k</p>', 4, 1, 'admin', 4),
-(1, 2, 1, '<p>l</p>', '<p>l</p>', '<p>l</p>', '<p>l</p>', '<p>ll</p>', '<p>l</p>', 5, 1, 'admin', 4),
-(1, 1, 1, '<p>k</p>', '<p>k</p>', '<p>k</p>', '<p>k</p>', '<p>k</p>', '<p>k</p>', 6, 1, 'admin', 4),
-(12, 9, 1, '<p>a</p>', '<p>b</p>', '<p>c</p>', '<p>v</p>', '<p>f</p>', '<p>b</p>', 7, 1, '', 4),
-(3, 4, 1, '<p>lll</p>', '<p>m</p>', '<p>j</p>', '<p>h</p>', '<p>g</p>', '<p>m</p>', 8, 1, '', 4),
-(12, 12, 1, '<p>l</p>', '<p>kn</p>', '<p>lkn</p>', '<p>kl</p>', '<p>nkjn</p>', '<p>kn</p>', 9, 1, '', 4),
-(12, 12, 1, '<p>j</p>', '<p>j</p>', '<p>j</p>', '<p>j</p>', '<p>jj</p>', '<p>j</p>', 10, 1, '', 4),
-(1, 33, 1, '<p>hhhhhhhhh</p>', '<p>h</p>', '<p>h</p>', '<p>h</p>', '<p>h</p>', '<p>h</p>', 11, 1, '', 4),
-(12, 12, 3, '<p>NgOninit Trong Angular dùng để làm gì</p>', '<p>Khởi tạo directive / component sau khi Angular hiển thị các thuộc tính ràng buộc dữ liệu và đặt các thuộc tính đầu vào của directive / component. Được gọi một lần, sau ngOnChanges() đầu tiên.</p>', '<p>Phát hiện và hành động theo những thay đổi mà Angular không thể hoặc sẽ không tự mình phát hiện.</p>', '<p>Thự thi sau khi Angular đã kiểm tra nội dung bên ngoài đã được đưa vào view của component. Được gọi sau ngAfterContentInit() và mọi ngDoCheck() tiếp theo.</p>', '<p>Thự thi sau khi Angular khởi tạo các view của component và các view con / view mà directive được đưa vào. Được gọi một lần sau ngAfterContentChecked() đầu tiên.</p>', '<p>Khởi tạo directive / component sau khi Angular hiển thị các thuộc tính ràng buộc dữ liệu và đặt các thuộc tính đầu vào của directive / component. Được gọi một lần, sau ngOnChanges() đầu tiên.</p>', 12, 1, '', 4);
+(1, 1, 1, '30 - 12 = ?', '10', '15', '18', '82', '18', 1, 1, 'Teacher01', 4),
+(1, 1, 1, '5 + 7 = ?', '12', '13', '14', '11', '12', 2, 1, 'Teacher01', 4),
+(1, 1, 1, '5 + 9 = ?', '13', '15', '17', '14', '14', 3, 1, 'Teacher01', 4),
+(1, 1, 2, '2 x 1 = ?', '1', '2', '3', '4', '2', 4, 1, 'Teacher01', 4),
+(1, 1, 2, '11 + 2 = ?', '15', '16', '13', '18', '13', 5, 1, 'Teacher01', 4),
+(1, 1, 2, '18 + 5 = ?', '20', '21', '22', '23', '23', 6, 1, 'Teacher01', 4),
+(1, 1, 3, '14 + 8 = ?', '20', '21', '22', '23', '22', 7, 1, 'Teacher01', 4),
+(1, 1, 3, '13 - 3 = ?', '7', '8', '9', '10', '10', 8, 1, 'Teacher01', 4),
+(1, 1, 3, '14 - 7 = ?', '7', '6', '5', '8', '7', 9, 1, 'Teacher01', 4),
+(1, 2, 1, '10 - 8 = ?', '2', '3', '4', '5', '2', 10, 1, 'Teacher01', 4),
+(1, 2, 1, '3 + 6 = ?', '7', '6', '9', '8', '9', 11, 1, 'Teacher01', 4),
+(1, 2, 1, '5+10 ?', '15', '10', '5', '4', '15', 12, 1, 'Teacher01', 4),
+(1, 2, 2, '2 x 7 = ?', '14', '16', '18', '12', '14', 13, 1, 'Teacher01', 4),
+(1, 2, 2, '2 x 9 = ?', '14', '16', '18', '12', '18', 14, 1, 'Teacher01', 4),
+(1, 2, 2, '3 x 7 = ?', '14', '16', '18', '21', '21', 15, 1, 'Teacher01', 4),
+(1, 2, 3, '3 x 5 = ?', '14', '16', '15', '12', '15', 16, 1, 'Teacher01', 4),
+(1, 2, 3, '4 x 10 = ?', '40', '4', '10', '1', '40', 17, 1, 'Teacher01', 4),
+(1, 2, 3, '2 x 10 = ?', '14', '16', '18', '20', '20', 18, 1, 'Teacher01', 4),
+(1, 2, 3, '10 + 20 = ?', '10', '20', '30', '03', '30', 19, 1, 'Teacher01', 4),
+(1, 3, 1, '10 x 10 = ?', '10', '20', '100', '11', '100', 20, 1, 'Teacher01', 4),
+(1, 3, 1, '2 x 5 = ?', '14', '16', '10', '12', '10', 21, 1, 'Teacher01', 4),
+(1, 3, 1, '4 x 7 =?', '27', '28', '29', '30', '28', 22, 1, 'Teacher01', 4),
+(1, 3, 2, '10 * 0 = ?', '10', '0', '1', '11', '0', 23, 1, 'Teacher01', 4),
+(1, 3, 2, '4 x 5 =?', '27', '28', '29', '20', '20', 24, 1, 'Teacher01', 4),
+(1, 3, 2, '5 x 8 =?', '37', '38', '39', '40', '40', 25, 1, 'Teacher01', 4),
+(1, 3, 3, '5 x 5 =?', '27', '28', '25', '30', '25', 26, 1, 'Teacher01', 4),
+(1, 3, 3, '7 x 9 = ?', '61', '63', '65', '67', '63', 27, 1, 'Teacher01', 4),
+(1, 3, 3, '7 x 7 = ?', '41', '43', '45', '49', '49', 28, 1, 'Teacher01', 4),
+(1, 3, 3, '7 x 8 = ?', '61', '63', '56', '67', '56', 29, 1, 'Teacher01', 4),
+(1, 4, 1, '9 x 9 = ?', '81', '63', '65', '67', '81', 30, 1, 'Teacher01', 4),
+(1, 4, 1, '6 x 9 = ?', '61', '63', '65', '54', '54', 31, 1, 'Teacher01', 4),
+(1, 4, 1, '21 : 3 = ?', '5', '6', '7', '8', '7', 32, 1, 'Teacher01', 4),
+(1, 4, 2, '24 : 8 = ?', '1', '2', '3', '4', '3', 33, 1, 'Teacher01', 4),
+(1, 4, 2, '27 : 3 = ?', '6', '7', '8', '9', '9', 34, 1, 'Teacher01', 1),
+(1, 4, 2, '32 : 8 = ?', '1', '2', '3', '4', '4', 35, 1, 'Teacher01', 4),
+(1, 4, 1, '25 : 5 = ?', '5', '2', '3', '4', '5', 36, 1, 'Teacher01', 4),
+(1, 4, 1, '42 : 7 = ?', '6', '5', '3', '4', '6', 37, 1, 'Teacher01', 4),
+(1, 4, 2, '56 : 8 = ?', '8', '7', '3', '4', '7', 38, 1, 'Teacher01', 4),
+(1, 4, 2, '81 : 9 = ?', '7', '8', '9', '81', '9', 39, 1, 'Teacher01', 4),
+(1, 4, 3, '40 : 8 = ?', '5', '2', '3', '4', '5', 40, 1, 'Teacher01', 4),
+(1, 4, 3, '18 : 9 = ?', '1', '2', '3', '4', '2', 41, 1, 'Teacher01', 4),
+(12, 12, 3, '<p>NgOninit Trong Angular dùng để làm gì</p>', '<p>Khởi tạo directive / component sau khi Angular hiển thị các thuộc tính ràng buộc dữ liệu và đặt các thuộc tính đầu vào của directive / component. Được gọi một lần, sau ngOnChanges() đầu tiên.</p>', '<p>Phát hiện và hành động theo những thay đổi mà Angular không thể hoặc sẽ không tự mình phát hiện.</p>', '<p>Thự thi sau khi Angular đã kiểm tra nội dung bên ngoài đã được đưa vào view của component. Được gọi sau ngAfterContentInit() và mọi ngDoCheck() tiếp theo.</p>', '<p>Thự thi sau khi Angular khởi tạo các view của component và các view con / view mà directive được đưa vào. Được gọi một lần sau ngAfterContentChecked() đầu tiên.</p>', '<p>Khởi tạo directive / component sau khi Angular hiển thị các thuộc tính ràng buộc dữ liệu và đặt các thuộc tính đầu vào của directive / component. Được gọi một lần, sau ngOnChanges() đầu tiên.</p>', 12, 1, 'Teacher01', 4);
 
 -- --------------------------------------------------------
 
@@ -301,7 +335,30 @@ CREATE TABLE `students` (
 
 INSERT INTO `students` (`student_id`, `username`, `email`, `password`, `name`, `permission`, `class_id`, `last_login`, `gender_id`, `avatar`, `birthday`, `doing_exam`, `starting_time`, `time_remaining`) VALUES
 (2, 'student001', 'student001@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'student 001', 3, 1, '2021-11-13 21:59:58', 1, 'avatar-default.jpg', '2021-10-20', NULL, NULL, NULL),
-(3, 'student002', 'student002@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'student 002', 3, 1, '0000-00-00 00:00:00', 2, 'avatar-default.jpg', '1997-01-30', NULL, NULL, NULL);
+(3, 'student002', 'student002@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'student 002', 3, 1, '0000-00-00 00:00:00', 2, 'avatar-default.jpg', '1997-01-30', NULL, NULL, NULL),
+(1, '2017HS1', 'example1@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Trần Phúc An', 3, 1, '2019-02-21 09:22:31', 2, 'avatar-default.jpg', '2008-01-25', NULL, NULL, NULL),
+(2, '2017HS2', 'example2@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Lều Tuấn Anh', 3, 1, '2018-11-15 19:37:31', 1, 'avatar-default.jpg', '2008-09-07', NULL, NULL, NULL),
+(3, '2017HS3', 'example3@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Phạm Văn Bội', 3, 1, '2018-11-16 08:50:02', 1, 'avatar-default.jpg', '2008-12-01', NULL, NULL, NULL),
+(4, '2017HS4', 'example4@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Trần Khánh Duy', 3, 1, '2018-09-20 04:19:27', 1, 'avatar-default.jpg', '2008-05-10', NULL, NULL, NULL),
+(5, '2017HS5', 'example5@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Trần Thành Đạt', 3, 1, '2018-09-19 04:09:18', 1, 'avatar-default.jpg', '2008-05-03', NULL, NULL, NULL),
+(6, '2017HS6', 'example6@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Nguyễn Quang Điện', 3, 1, '2018-09-24 06:13:23', 1, 'avatar-default.jpg', '2008-10-10', NULL, NULL, NULL),
+(7, '2017HS7', 'example7@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Phạm Thị Diệu Hằng', 3, 1, '2018-09-26 05:17:17', 1, 'avatar-default.jpg', '2008-02-03', NULL, NULL, NULL),
+(8, '2017HS8', 'example8@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Phạm Khánh Hoàng', 3, 1, '2018-09-18 06:17:12', 1, 'avatar-default.jpg', '2008-01-01', NULL, NULL, NULL),
+(9, '2017HS9', 'example9@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Nguyễn Khánh Linh', 3, 1, '2018-09-18 05:10:10', 1, 'avatar-default.jpg', '2008-01-03', NULL, NULL, NULL),
+(10, '2017HS10', 'example10@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Ngô Trần Khôi', 3, 1, '2018-09-28 06:17:28', 1, 'avatar-default.jpg', '2008-04-06', NULL, NULL, NULL),
+(11, '2017HS11', 'example11@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Lê Thị Khánh Ly', 3, 1, '2018-09-20 03:13:13', 1, 'avatar-default.jpg', '2008-01-03', NULL, NULL, NULL),
+(12, '2017HS12', 'example12@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Nguyễn Thị Phương Mai', 3, 1, '2018-09-20 09:13:13', 1, 'avatar-default.jpg', '2008-01-06', NULL, NULL, NULL),
+(13, '2017HS13', 'example13@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Đỗ Thị Mùi', 3, 1, '2018-09-20 03:07:11', 1, 'avatar-default.jpg', '2008-09-13', NULL, NULL, NULL),
+(14, '2017HS14', 'example14@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Bùi Kim Oanh', 3, 1, '2018-09-20 10:23:16', 1, 'avatar-default.jpg', '2008-10-30', NULL, NULL, NULL),
+(15, '2017HS15', 'example15@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Nguyễn Thị Kiều Oanh', 3, 1, '2018-09-15 00:00:00', 1, 'avatar-default.jpg', '2008-11-20', NULL, NULL, NULL),
+(16, '2017HS16', 'example16@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hoàng Thị Hà', 3, 1, '2018-09-22 08:17:14', 1, 'avatar-default.jpg', '2008-03-26', NULL, NULL, NULL),
+(17, '2017HS17', 'example17@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hoàng Thị G', 3, 1, '2018-09-14 06:15:15', 1, 'avatar-default.jpg', '2008-01-12', NULL, NULL, NULL),
+(18, '2017HS18', 'example18@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hoàng Thị H', 3, 1, '2018-09-21 10:20:11', 1, 'avatar-default.jpg', '2008-01-03', NULL, NULL, NULL),
+(19, '2017HS19', 'example19@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Lê Thị Khánh Ly', 3, 1, '2018-09-20 06:14:11', 1, 'avatar-default.jpg', '2008-06-06', NULL, NULL, NULL),
+(20, '2017HS20', 'example20@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Vũ Huy Hoàng', 3, 1, '2018-09-28 13:12:12', 1, 'avatar-default.jpg', '2008-01-02', NULL, NULL, NULL),
+(21, '2017HS21', 'example21@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Hoàng Văn Thịnh', 3, 1, '2018-01-26 02:06:09', 1, 'avatar-default.jpg', '2008-01-26', NULL, NULL, NULL),
+(22, '2017HS22', 'example22@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Nguyễn Thị Thi', 3, 1, '2018-01-26 02:06:09', 1, 'avatar-default.jpg', '2008-01-26', NULL, NULL, NULL),
+(23, '2017HS23', 'example23@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 'Nguyễn Thị Thu', 3, 1, '2018-11-16 10:48:33', 1, 'avatar-default.jpg', '2008-01-26', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
