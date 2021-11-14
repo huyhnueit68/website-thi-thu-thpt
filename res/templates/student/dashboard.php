@@ -3,11 +3,11 @@
 </div>
 <div class="block-content overflow scrollbar">
 	<div class="content" style="padding-top: 10px">
-		<div class="row col l12">
+		<div class="display-column">
 			<?php
 			for ($i = 0; $i < count($tests); $i++) {
 			?>
-				<div class="col l3 m4 s6">
+				<div class="template-column">
 					<div id="tests_list">
 						<span class="title">Tên: <?= $tests[$i]->test_name ?></span><br />
 						<span class="title">Môn: <?= $tests[$i]->subject_detail ?></span><br />

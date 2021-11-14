@@ -402,7 +402,7 @@ body {
     font-size: 20px;
 }
 .tabs .indicator {
-    background-color: #02796e !important;
+    background-color: #0d47a1 !important;
 }
 .clear {
     clear: both;
@@ -423,7 +423,7 @@ body {
     margin: 0 !important;
 }
 .nav-green {
-    background: #02796e;
+    background: #0d47a1;
 }
 .cursor {
     cursor: pointer;
@@ -511,7 +511,7 @@ body {
     padding-bottom: 20px;
 }
 .content {
-    border-top: 2px solid #02796e;
+    border-top: 2px solid #0d47a1;
     position: relative;
     height: auto;
     min-height: 500px;
@@ -548,7 +548,7 @@ body {
     margin: 2px;
 }
 .notification_content .message .name {
-    color: #02796e;
+    color: #0d47a1;
     font-size: 18px;
 }
 .notification_content .message .time_sent {
@@ -603,7 +603,7 @@ body {
     justify-content: space-around;
 }
 .exam_ans span {
-    color: #02796e;
+    color: #0d47a1;
     font-size: 20px !important;
     font-weight: bolder;
 }
@@ -623,7 +623,7 @@ body {
     width: 5px;
 }
 .scrollbar::-webkit-scrollbar-thumb {
-    background-color: #02796e;
+    background-color: #0d47a1;
 }
 .rot {
     transform: rotate(90deg);
@@ -639,7 +639,7 @@ body {
     display: inline-block;
     width: 100%;
     margin: 10px 0;
-    border: 1.5px solid #02796e;
+    border: 1.5px solid #0d47a1;
     border-radius: 10px;
 }
 #dashboard .dashboard-inner-item .left-item {
@@ -650,7 +650,7 @@ body {
     font-size: 30px;
     padding: 10px 0;
     color: white;
-    background: #02796e;
+    background: #0d47a1;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
@@ -661,7 +661,7 @@ body {
     width: 70%;
     line-height: 32px;
     padding: 10px 0;
-    color: #02796e;
+    color: #0d47a1;
 }
 #dashboard .dashboard-inner-item .right-item .right-item-top {
     width: 100%;
@@ -691,7 +691,7 @@ body {
     transition: 0.5s;
     height: calc(100% - 65px);
     background: white;
-    border: 2px solid #02796e;
+    border: 2px solid #0d47a1;
 }
 .testing-left .menu-link {
     display: block;
@@ -744,11 +744,25 @@ body {
 #tests_list {
     display: inline-block;
     width: 100%;
-    border: 1.5px solid #02796e;
+    border: 1.5px solid #0d47a1;
     border-radius: 10px;
     padding: 10px;
 }
 .full-width {
     width: 100% !important;
+}
+
+.col.l3.m4.s6 {
+    padding-bottom: 8px;
+}
+
+.display-column {
+    display: grid;
+    grid-gap: 26px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.template-column {
 }
 /*# sourceMappingURL=style.min.css.map */
