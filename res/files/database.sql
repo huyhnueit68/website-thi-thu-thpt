@@ -558,7 +558,7 @@ ALTER TABLE `classes`
 ALTER TABLE `genders`
   MODIFY `gender_id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
---
+-- 
 -- AUTO_INCREMENT for table `grades`
 --
 ALTER TABLE `grades`
