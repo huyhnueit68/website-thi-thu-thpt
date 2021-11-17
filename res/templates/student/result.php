@@ -123,6 +123,31 @@
                 }
                 ?>
 	        </div>
+            <div class="return-test">
+                <a class="waves-effect waves-light btn modal-trigger custom-width" style="margin-bottom: 7px;" href="#do-test-<?= $test_code ?>" id="do_test">Làm Lại</a>
+                <div id="do-test-<?= $test_code ?>" class="modal">
+                    <div class="row col l12">
+                        <form class="form_test" action="" method="POST" role="form" id="form_submit_test_<?= $test_code ?>">
+                            <div class="modal-content">
+                                <h5>Xác nhận vào thi</h5>
+                                <span>Mã đề: <?= $test_code ?></span></br>
+                                <div class="modal-body">
+                                    <div class="input-field">
+                                        <input type="hidden" value="<?= $test_code ?>" name="test_code" id="test_code">
+                                        <input type="hidden" value="<?= $test_code ?>" name="password" id="password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l12 s12">
+                                <div class="modal-footer">
+                                    <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Trở Lại</a>
+                                    <button type="submit" class="waves-effect waves-green btn-flat modal-action modal-close">Đồng Ý</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 	    </div>
 	</div>
 	</div>

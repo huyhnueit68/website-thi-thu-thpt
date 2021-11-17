@@ -51,7 +51,11 @@ class Database
         }
         return $query->fetch();
     }
-    //thực thi insert hoặc update và return true false
+    
+    /**
+     * Hàm thực thi insert hoặc update và return true false
+     * CreatedBy: PQ Huy (17.11.2021)
+     */
     public function execute_return_status()
     {
         try {

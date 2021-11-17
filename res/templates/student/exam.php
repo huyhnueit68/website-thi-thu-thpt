@@ -22,7 +22,7 @@
 				<div class="left pad-left-20">
 					<span class="title">Làm Đề thi <?= $test[0]->test_code ?></span>
 				</div>
-				<span class="brand-logo right cursor" id="timer"></span>
+				<span class="timer-endtest" id="timer"></span>
 			</div>
 		</nav>
 		<div id="status" class="status"></div>
@@ -32,7 +32,7 @@
 			<?php
 			for ($i = 0; $i < count($test); $i++) {
 				if ($test[$i]->student_answer != "") {
-					echo '<a href="#quest-' . ($i + 1) . '" class="menu-link">Câu ' . ($i + 1) . ' <span class="tick" id="tick-' . ($i + 1) . '">✓</span></a>';
+					echo '<a href="#quest-' . ($i + 1) . '" class="menu-link">Câu ' . ($i + 1) . ' <span class="tick" id="tick-' . ($i + 1) . '"></span></a>';
 				} else {
 					echo '<a href="#quest-' . ($i + 1) . '" class="menu-link">Câu ' . ($i + 1) . ' <span class="tick" id="tick-' . ($i + 1) . '"></span></a>';
 				}
@@ -53,7 +53,7 @@
 							<label>
 								<?php
 								if (trim($test[$i]->student_answer) == trim($test[$i]->answer_a)) {
-									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="a" checked />';
+									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="a" />';
 								} else {
 									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="a" />';
 								}
@@ -65,7 +65,7 @@
 							<label>
 								<?php
 								if (trim($test[$i]->student_answer) == trim($test[$i]->answer_b)) {
-									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="b" checked />';
+									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="b" />';
 								} else {
 									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="b" />';
 								}
@@ -77,7 +77,7 @@
 							<label>
 								<?php
 								if (trim($test[$i]->student_answer) == trim($test[$i]->answer_c)) {
-									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="c" checked />';
+									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="c" />';
 								} else {
 									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="c" />';
 								}
@@ -89,7 +89,7 @@
 							<label>
 								<?php
 								if (trim($test[$i]->student_answer) == trim($test[$i]->answer_d)) {
-									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="d" checked />';
+									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="d" />';
 								} else {
 									echo '<input name="' . $test[$i]->question_id . '" data-idquest="' . $test[$i]->question_id . '" type="radio" data-stt="' . ($i + 1) . '" value="d" />';
 								}
@@ -146,8 +146,8 @@
 					sec_text = sec;
 				$('#timer').text(min_text + ':' + sec_text);
 				if (min < 0) {
-					alert('Hết giờ, hệ thống sẽ tự động nộp bài!');
 					window.location.replace("index.php?action=accept_test");
+					alert('Hết giờ, hệ thống sẽ tự động nộp bài!');
 				}
 			}, 1000);
 		}

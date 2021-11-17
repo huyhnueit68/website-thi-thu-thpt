@@ -277,28 +277,39 @@ class Controller_Student
 	}
 
 	/**
+	 * Hàm xác nhận nộp bài thi
 	 * CreatedBy: PQ Huy (13.11.2021)
 	 */
 	public function accept_test()
 	{
-		$model = new Model_Student();
-		$test = $model->get_result_quest($this->info['doing_exam'], $this->info['ID']);
-		$test_code = $test[0]->test_code;
-		$total_questions = $test[0]->total_questions;
-		$correct = 0;
-		$c = 10 / $total_questions;
-		foreach ($test as $t) {
-			if (trim($t->student_answer) == trim($t->correct_answer))
-				$correct++;
+		try {
+			// lấy kết quả thi của hs
+			$model = new Model_Student();
+			$test = $model->get_result_quest($this->info['doing_exam'], $this->info['ID']);
+			// lấy ra test code và user để xóa cái cũ đi nếu có
+			$test_code = $test[0]->test_code;
+			$studentID = $test[0]->student_id;
+			$model->del_old_score($test_code, $studentID);
+			// tiến hành tính điểm và lưu kết quả
+			$total_questions = $test[0]->total_questions;
+			$correct = 0;
+			$c = 10 / $total_questions;
+			foreach ($test as $t) {
+				if (trim($t->student_answer) == trim($t->correct_answer))
+					$correct++;
+			}
+			$score = $correct * $c;
+			$score_detail = $correct . '/' . $total_questions;
+			$model->insert_score($this->info['ID'], $test_code, $score, $score_detail);
+			$model->reset_doing_exam($this->info['ID']);
+			header("Location: index.php?action=show_result&test_code=" . $test_code);
+		} catch (Exception $e) {
+			echo 'Exception: ',  $e->getMessage(), "\n";
 		}
-		$score = $correct * $c;
-		$score_detail = $correct . '/' . $total_questions;
-		$model->insert_score($this->info['ID'], $test_code, $score, $score_detail);
-		$model->reset_doing_exam($this->info['ID']);
-		header("Location: index.php?action=show_result&test_code=" . $test_code);
 	}
 
 	/**
+	 * Hàm logout
 	 * CreatedBy: PQ Huy (13.11.2021)
 	 */
 	public function logout()
@@ -314,6 +325,7 @@ class Controller_Student
 	}
 
 	/**
+	 * Hàm hiển thị trang dashboard
 	 * CreatedBy: PQ Huy (13.11.2021)
 	 */
 	public function show_dashboard()

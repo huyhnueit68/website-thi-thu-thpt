@@ -61,6 +61,7 @@ class Model_Student extends Database
 		$this->set_query($sql);
 		$this->execute_return_status();
 	}
+	
 	public function update_doing_exam($test_code, $time, $ID)
 	{
 		$sql = "UPDATE students set doing_exam= '$test_code', time_remaining = '$time',starting_time = NOW() where student_id='$ID'";
@@ -128,6 +129,7 @@ class Model_Student extends Database
 		$this->set_query($sql);
 		return $this->execute_return_status();
 	}
+	
 	public function get_doing_quest($test_code, $student_id)
 	{
 		$sql = "SELECT DISTINCT student_test_detail.answer_a,student_test_detail.answer_b,student_test_detail.answer_c,student_test_detail.answer_d,student_test_detail.student_answer,questions.question_id,student_test_detail.test_code,questions.question_content FROM student_test_detail
@@ -169,4 +171,16 @@ class Model_Student extends Database
 		$this->set_query($sql);
 		return $this->execute_return_status();
 	}
+
+	/**
+	 * Hàm xóa điểm cũ khi làm bài thi
+	 */
+	public function del_old_score($test_code, $studentID)
+	{
+		$sql = "DELETE FROM scores WHERE student_id='$studentID' AND test_code='$test_code';";
+		$this->set_query($sql);
+		return $this->execute_return_status();
+	}
+
+	
 }

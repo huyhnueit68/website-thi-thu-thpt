@@ -506,6 +506,14 @@ body {
     padding-top: 2px;
     font-weight: bold;
     color: blue;
+    z-index: 10000;
+}
+.timer-endtest {
+    position: absolute;
+    font-size: 35px;
+    right: 24px;
+    font-weight: 900;
+    z-index: 10000;
 }
 .block-content {
     padding-bottom: 20px;
@@ -764,5 +772,23 @@ body {
 }
 
 .template-column {
+}
+
+.btn.full-width.done-test {
+    background-color: #28a745;
+    margin-bottom: 7px;
+}
+
+.return-test {
+    width: 100%;
+    height: auto;
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.return-test .custom-width {
+    width: 20%;
 }
 /*# sourceMappingURL=style.min.css.map */

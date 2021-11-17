@@ -22,12 +22,12 @@
 							$flag = false;
 							for ($j = 0; $j < count($scores); $j++) {
 								if ($tests[$i]->test_code == $scores[$j]->test_code) {
-									$flag = false;
+									$flag = true;
 									break;
 								}
 							}
 							if ($flag)
-								echo '<a href="index.php?action=show_result&test_code=' . $tests[$i]->test_code . '" class="btn full-width">Chi Tiết Bài Làm</a>';
+								echo '<a href="index.php?action=show_result&test_code=' . $tests[$i]->test_code . '" class="btn full-width done-test">Làm bài (Đã làm)</a>';
 							else {
 						?>
 								<a class="waves-effect waves-light btn modal-trigger full-width" style="margin-bottom: 7px;" href="#do-test-<?= $tests[$i]->test_code ?>" id="do_test">Làm Bài</a>
@@ -65,9 +65,9 @@
 								}
 							}
 							if ($flag_2)
-								echo '<a href="index.php?action=show_result&test_code=' . $tests[$i]->test_code . '" class="btn full-width">Chi Tiết Bài Làm</a>';
+								echo '<a href="index.php?action=show_result&test_code=' . $tests[$i]->test_code . '" class="btn full-width">Làm bài (Đã làm)</a>';
 							else
-								echo '<button class="btn full-width" disabled>Chi Tiết Bài Làm</button>';
+								echo '<button class="btn full-width" disabled>Làm bài (Đã làm)</button>';
 						}
 						?>
 					</div>
