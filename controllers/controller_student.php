@@ -391,6 +391,17 @@ class Controller_Student
 	}
 
 	/**
+	 * CreatedBy: PQ Huy (29.11.2021)
+	 */
+	public function student_detail()
+	{
+		$view = new View_Student();
+		$view->show_head_left($this->info);
+		$view->student_detail($this->info);
+		$view->show_foot();
+	}
+
+	/**
 	 * CreatedBy: PQ Huy (13.11.2021)
 	 */
 	public function show_result()

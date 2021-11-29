@@ -54,6 +54,7 @@
 					<a href="index.php?action=show_tests_panel" class="menu-list cursor">Quản Lý Đề thi</a> -->
 				</div>
 			</li>
+			<a href="index.php?action=show_profiles" class="collapsible-header font-color"><i class="material-icons">info</i>Thông tin cá nhân</a>
 			<a href="index.php?action=show_notifications_panel" class="collapsible-header font-color"><i class="material-icons">send</i>Gửi Thông Báo</a>
 			<a href="index.php?action=show_about" class="collapsible-header font-color"><i class="material-icons">insert_comment</i>Liên Hệ</a>
 		</ul>

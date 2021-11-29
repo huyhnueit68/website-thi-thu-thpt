@@ -23,7 +23,7 @@ class Controller_Teacher01
     public function __construct()
     {
         $user_info = $this->get_admin_info($_SESSION['username']);
-        $this->info['admin_id'] = $user_info->admin_id;
+        $this->info['admin_id'] = $user_info->teacher_id;
         $this->update_last_login($this->info['admin_id']);
         $this->info['username'] = $user_info->username;
         $this->info['name'] = $user_info->name;
@@ -156,7 +156,8 @@ class Controller_Teacher01
     public function get_list_teachers()
     {
         $model = new Model_Teacher01();
-        echo json_encode($model->get_list_teachers());
+        // get session teacher
+        echo json_encode($model->get_list_teachers($this->info['admin_id']));
     }
     public function edit_teacher($teacher_id, $password, $name, $gender_id, $birthday)
     {
@@ -1341,6 +1342,11 @@ class Controller_Teacher01
         $view->show_head_left($this->info);
         $view->show_profiles($this->get_admin_info($this->info['username']));
         $view->show_foot();
+    }
+    public function profiles()
+    {
+        $model = new Model_Teacher();
+        return $model->get_profiles($_SESSION['username']);
     }
     public function show_404()
     {

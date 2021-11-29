@@ -3,7 +3,7 @@ $(function () {
 })
 function get_chat_all(ID) {
     var url = "index.php?action=get_chat_all";
-    var success = function(result) {
+    var success = function (result) {
         var json_data = $.parseJSON(result);
         insert_chats(json_data);
     };

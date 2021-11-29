@@ -46,7 +46,7 @@
 				</div>
 				<div class="collapsible-body list">
 					<!-- <a href="index.php?action=show_admins_panel" class="menu-list cursor">Quản Lý Admin</a> -->
-					<!-- <a href="index.php?action=show_teachers_panel" class="menu-list cursor">Quản Lý Gíao Viên</a> -->
+					<a href="index.php?action=show_teachers_panel" class="menu-list cursor">Quản Lý Thông tin cá nhân</a>
 					<a href="index.php?action=show_classes_panel" class="menu-list cursor">Quản Lý Lớp</a>
 					<a href="index.php?action=show_students_panel" class="menu-list cursor">Quản Lý Học Sinh</a>
 					<a href="index.php?action=show_subjects_panel" class="menu-list cursor">Quản Lý Môn</a>
@@ -54,6 +54,7 @@
 					<a href="index.php?action=show_tests_panel" class="menu-list cursor">Quản Lý Đề thi</a>
 				</div>
 			</li>
+			<a href="index.php?action=show_profiles" class="collapsible-header font-color"><i class="material-icons">info</i>Thông tin cá nhân</a>
 			<a href="index.php?action=show_notifications_panel" class="collapsible-header font-color"><i class="material-icons">send</i>Gửi Thông Báo</a>
 			<a href="index.php?action=show_about" class="collapsible-header font-color"><i class="material-icons">insert_comment</i>Liên Hệ</a>
 		</ul>

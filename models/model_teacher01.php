@@ -13,10 +13,12 @@ class Model_Teacher01 extends Database
     public function get_admin_info($username)
     {
         $sql = "
-        SELECT DISTINCT admin_id,username,avatar,email,name,last_login,birthday,permission_detail,gender_detail,genders.gender_id FROM admins
-        INNER JOIN permissions ON admins.permission = permissions.permission
-        INNER JOIN genders ON admins.gender_id = genders.gender_id
-        WHERE username = '$username'";
+        SELECT DISTINCT teacher_id,username,avatar,email,name,last_login,birthday,permission_detail,gender_detail,genders.gender_id 
+        FROM teachers 
+        INNER JOIN permissions ON teachers.permission = permissions.permission 
+        INNER JOIN genders 
+        ON teachers.gender_id = genders.gender_id 
+        WHERE username = '$username';";
         $this->set_query($sql);
         return $this->load_row();
     }
@@ -150,11 +152,12 @@ class Model_Teacher01 extends Database
         return $this->execute_return_status();
         // return true;
     }
-    public function get_list_teachers()
+    public function get_list_teachers($teacher_id)
     {
         $sql = "SELECT DISTINCT teacher_id,username,avatar,email,name,last_login,birthday,permission_detail,gender_detail FROM teachers
         INNER JOIN permissions ON teachers.permission = permissions.permission
-        INNER JOIN genders ON teachers.gender_id = genders.gender_id";
+        INNER JOIN genders ON teachers.gender_id = genders.gender_id 
+        WHERE teacher_id = $teacher_id;";
         $this->set_query($sql);
         return $this->load_rows();
     }

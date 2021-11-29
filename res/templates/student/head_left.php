@@ -36,6 +36,7 @@
 			</div>
 		</div>
 		<ul class="collapsible reset-margin" data-collapsible="accordion">
+			<a href="index.php?action=show_profiles" class="collapsible-header font-color cursor"><i class="material-icons">library_books</i>Thông tin cá nhân</a>
 			<a href="index.php?action=show_dashboard" class="collapsible-header font-color cursor"><i class="material-icons">library_books</i>Làm Đề thi Thử</a>
 			<a href="index.php?action=show_chat" class="collapsible-header font-color cursor"><i class="material-icons">send</i>Trò Chuyện</a>
 			<a href="index.php?action=show_notifications" class="collapsible-header font-color cursor"><i class="material-icons">send</i>Xem Thông Báo</a>
