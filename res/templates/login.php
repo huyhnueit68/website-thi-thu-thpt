@@ -59,7 +59,7 @@
 						</div>
 						<div class="box-login--register">
 							<span>Chưa có tài khoản?</span>
-							<a href="" class="register">Đăng ký</a>
+							<a href="register.php" class="register">Đăng ký</a>
 						</div>
 					</form>
 				</div>

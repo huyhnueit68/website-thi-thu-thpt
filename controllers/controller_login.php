@@ -15,6 +15,11 @@ class Controller_Login
         $view = new View_Login();
         $view->show_login();
     }
+    public function show_register()
+    {
+        $view = new View_Login();
+        $view->show_register();
+    }
     public function submit_login()
     {
         $result = array();

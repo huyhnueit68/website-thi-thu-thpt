@@ -27,6 +27,36 @@ function submit_login() {
     };
     $.post(url, data, success);
 }
+
+/**
+ * Hàm login
+ * CreatedBy: PQ Huy (30.11.2021)
+ */
+function submit_register() {
+    debugger
+    $('#loading').css('display', 'inline');
+    var url = "index.php?action=submit_login";
+    var data = {
+        username: $("#username").val()
+    };
+    var success = function (result) {
+        var json_data = $.parseJSON(result);
+        show_status(json_data);
+        if (json_data.status) {
+            $('#field_username').css('display', 'none');
+            $('#lbl_pw').removeClass('hidden');
+            $('#password').removeClass('hidden');
+            $('#hi').css('display', 'inline');
+            $('#hi-text').text("" + json_data.name + "");
+            $('#btn-login').html("Tiếp Tục").css('width', '100%').attr('onclick', 'submit_password()');
+            $('#btn-fotgot').css('display', 'none');
+            $('#reload').css('display', 'inline');
+        }
+        $('#loading').css('display', 'none');
+    };
+    $.post(url, data, success);
+}
+
 function reload() {
     $('#reload').css('display', 'none');
     $('#field_username').css('display', 'inline');
