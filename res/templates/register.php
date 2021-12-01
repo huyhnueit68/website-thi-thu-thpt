@@ -41,33 +41,33 @@
 							<div class="left-align" style="color: #3c763d;">
 							</div>
 						</div>
-						<div class="input-field" id="field_username">
+						<div class="input-field" id="field_password">
 							<input type="password" name="password" id="password" required>
 							<label for="password" id="lbl_usr">Mật khẩu</label>
 							<div class="left-align" style="color: #3c763d;">
 							</div>
 						</div>
-						<div class="input-field" id="field_username">
+						<div class="input-field" id="field_password2">
 							<input type="password" name="password2" id="password2" required>
 							<label for="password2" id="lbl_usr">Nhập lại mật khẩu</label>
 							<div class="left-align" style="color: #3c763d;">
 							</div>
 						</div>
-						<div class="input-field" id="field_username">
-							<input type="text" name="username" id="username" required>
-							<label for="username" id="lbl_usr">Họ tên</label>
+						<div class="input-field" id="field_fullname">
+							<input type="text" name="fullname" id="fullname" required>
+							<label for="fullname" id="lbl_usr">Họ tên</label>
 							<div class="left-align" style="color: #3c763d;">
 							</div>
 						</div>
-						<div class="input-field" id="field_username">
-							<input type="text" name="username" id="username" required>
-							<label for="username" id="lbl_usr">Số điện thoại</label>
+						<div class="input-field" id="field_phonenumber">
+							<input type="text" name="phonenumber" id="phonenumber" required>
+							<label for="phonenumber" id="lbl_usr">Số điện thoại</label>
 							<div class="left-align" style="color: #3c763d;">
 							</div>
 						</div>
-						<div class="input-field" id="field_username">
-							<input type="text" name="username" id="username">
-							<label for="username" id="lbl_usr">Địa chỉ</label>
+						<div class="input-field" id="field_address">
+							<input type="text" name="address" id="address">
+							<label for="address" id="lbl_usr">Địa chỉ</label>
 							<div class="left-align" style="color: #3c763d;">
 							</div>
 						</div>

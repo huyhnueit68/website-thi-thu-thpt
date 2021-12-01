@@ -4,6 +4,10 @@ $(document).ready(function () {
     });
 });
 
+/**
+ * Hàm xử lý login
+ * CreatedBy: PQ Huy (10.10.2021)
+ */
 function submit_login() {
     $('#loading').css('display', 'inline');
     var url = "index.php?action=submit_login";
@@ -29,30 +33,30 @@ function submit_login() {
 }
 
 /**
- * Hàm login
+ * Hàm xử lý đăng ký
  * CreatedBy: PQ Huy (30.11.2021)
  */
 function submit_register() {
-    debugger
     $('#loading').css('display', 'inline');
-    var url = "index.php?action=submit_login";
+    var url = "index.php?action=submit_register";
     var data = {
-        username: $("#username").val()
+        username: $("#username").val(),
+        password: $("#password").val(),
+        password2: $("#password2").val(),
+        fullname: $("#fullname").val(),
+        phonenumber: $("#phonenumber").val(),
+        address: $("#address").val()
     };
     var success = function (result) {
         var json_data = $.parseJSON(result);
         show_status(json_data);
         if (json_data.status) {
-            $('#field_username').css('display', 'none');
-            $('#lbl_pw').removeClass('hidden');
-            $('#password').removeClass('hidden');
-            $('#hi').css('display', 'inline');
-            $('#hi-text').text("" + json_data.name + "");
-            $('#btn-login').html("Tiếp Tục").css('width', '100%').attr('onclick', 'submit_password()');
-            $('#btn-fotgot').css('display', 'none');
-            $('#reload').css('display', 'inline');
+            $('#loading').css('display', 'inline');
+            setTimeout(function () {
+                location.replace('index.php');
+            }, 1500);
+            $('#loading').css('display', 'none');
         }
-        $('#loading').css('display', 'none');
     };
     $.post(url, data, success);
 }

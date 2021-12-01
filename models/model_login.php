@@ -56,9 +56,25 @@ class Model_Login extends Database
             return false;
         }
     }
+    /**
+     * Cập nhật mật khẩu
+     * CreatedBy: PQ Huy (10.10.2021)
+     */
     public function update_new_password($password, $permission, $username)
     {
         $sql = "UPDATE $permission SET password = '$password' WHERE username = '$username' OR email = '$username'";
+        $this->set_query($sql);
+        $this->load_row();
+    }
+    /**
+     * Hàm xử lý đăng ký
+     * CreatedBy: PQ Huy (30.11.2021)
+     */
+    public function save_register($result)
+    {
+        // mã hóa md5 password
+        $sql = "INSERT INTO students (username, email, password, name, permission, class_id, last_login, gender_id, avatar, birthday, doing_exam, starting_time, time_remaining)".
+        "VALUES ('".$result['username']."', '".$result['username']."', '".md5($result["password"])."', '".$result['fullname']."', '3', '1', '".date('Y-m-d H:i:s')."', '2', 'avatar-default.jpg', '".date('Y-m-d')."', NULL, '".date('Y-m-d H:i:s')."', NULL);";
         $this->set_query($sql);
         $this->load_row();
     }

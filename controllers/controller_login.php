@@ -20,6 +20,49 @@ class Controller_Login
         $view = new View_Login();
         $view->show_register();
     }
+    public function submit_register(){
+        $result = array();
+        // get all value
+        $result["data"] = [
+            'username' => $_POST['username'],
+            'password' => $_POST['password'],
+            'password2' => $_POST['password2'],
+            'fullname' => $_POST['fullname'],
+            'phonenumber' => $_POST['phonenumber'],
+            'address' => $_POST['address']
+        ];
+        // check null
+        $flag = true;
+        foreach($result["data"] as $data) {
+            if($data == null || $data == '') {
+                $flag = false;
+                break;
+            }
+        }
+        if(!$flag){
+            $result['status_value'] = "Vui lòng nhập đầy đủ thông tin!";
+            $result['status'] = 0;
+        } else {
+            if($result["data"]["password"] != $result["data"]["password2"]) {
+                $result['status_value'] = "Nhập lại mật khẩu nhập chưa khớp!";
+                $result['status'] = 0;
+            } else {
+                // check duplicate account
+                $user = $this->get_username($result["data"]["username"]);
+                if (!empty($user)) {
+                    $result['status_value'] = "Tài khoản đã tồn tại vui lòng chọn tên tài khoản khác!";
+                    $result['status'] = 0;
+                } else {
+                    // lưu data
+                    $model = new Model_Login();
+                    $model->save_register($result["data"]);
+                    $result['status_value'] = "Đăng ký thành công!";    
+                    $result['status'] = 1;
+                }
+            }
+            echo json_encode($result);
+        }
+    }
     public function submit_login()
     {
         $result = array();
@@ -55,7 +98,6 @@ class Controller_Login
                 }
                 if ($user->permission == 2) {
                     $_SESSION['permission'] = "teacher01";
-                    // $_SESSION['permission'] = "teacher";
                 }
                 if ($user->permission == 3) {
                     $_SESSION['permission'] = "student";
