@@ -51,7 +51,7 @@
 					<a href="index.php?action=show_students_panel" class="menu-list cursor">Quản Lý Học Sinh</a>
 					<a href="index.php?action=show_subjects_panel" class="menu-list cursor">Quản Lý Môn</a>
 					<a href="index.php?action=show_questions_panel" class="menu-list cursor">Quản Lý Câu Hỏi</a>
-					<a href="index.php?action=show_tests_panel" class="menu-list cursor">Quản Lý Đề thi</a>
+					<a href="index.php?action=show_statistical" class="menu-list cursor">Thống kê</a>
 				</div>
 			</li>
 			<a href="index.php?action=show_profiles" class="collapsible-header font-color"><i class="material-icons">info</i>Thông tin cá nhân</a>

@@ -20,6 +20,10 @@ $(document).ready(function () {
     });
 });
 
+/**
+ * 
+ * @param {*} json_data 
+ */
 function show_status(json_data) {
     if (json_data.status) {
         $('#status').addClass('success');

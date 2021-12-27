@@ -70,6 +70,9 @@ class View_Teacher01
     {
         include 'res/templates/teacher01/notifications_panel.html';
     }
+    public function show_statistical($all_question){
+        include 'res/templates/teacher01/statistical.php';
+    }
     public function show_about()
     {
         require_once 'config/config.php';

@@ -1,21 +1,21 @@
-$(function() {
+$(function () {
     $('#table_questions').DataTable().destroy();
     get_list_questions();
     $('select').select();
-    $('#select_all').on('change', function() {
+    $('#select_all').on('change', function () {
         if (this.checked) {
-            $('.checkbox').each(function() {
+            $('.checkbox').each(function () {
                 this.checked = true;
             });
             $('#select_action').removeClass('hidden');
         } else {
-            $('.checkbox').each(function() {
+            $('.checkbox').each(function () {
                 this.checked = false;
             });
             $('#select_action').addClass('hidden');
         }
     });
-    $('table').on('click', 'a.modal-trigger', function() {
+    $('table').on('click', 'a.modal-trigger', function () {
         var elem = document.querySelector(this.id);
         var instance = M.Modal.init(elem);
         var instance = M.Modal.getInstance(elem);
@@ -37,7 +37,7 @@ function check_box() {
 
 function delete_check() {
     var _list_check = '';
-    $('.checkbox:checked').each(function() {
+    $('.checkbox:checked').each(function () {
         _list_check += this.value + ','
     });
     data = {
@@ -45,7 +45,7 @@ function delete_check() {
     }
     $('#preload').removeClass('hidden');
     var url = "index.php?action=delete_check_questions";
-    var success = function(result) {
+    var success = function (result) {
         var json_data = $.parseJSON(result);
         show_status(json_data);
         $('#table_questions').DataTable().destroy();
@@ -61,7 +61,7 @@ function delete_check() {
 function get_list_questions() {
     $('#preload').removeClass('hidden');
     var url = "index.php?action=get_list_questions";
-    var success = function(result) {
+    var success = function (result) {
         var json_data = $.parseJSON(result);
         show_list_questions(json_data);
         $('.modal').modal();
@@ -105,18 +105,18 @@ function show_list_questions(data) {
             },
         },
         "aoColumnDefs": [{
-                "bSortable": false,
-                "aTargets": [0, 9]
-            }, //hide sort icon on header of column 0, 10
+            "bSortable": false,
+            "aTargets": [0, 9]
+        }, //hide sort icon on header of column 0, 10
         ],
         'aaSorting': [
             [1, 'asc']
         ], // start to sort data in second column
-        "drawCallback": function(settings) {
+        "drawCallback": function (settings) {
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     });
-    $("form").on('submit', function(event) {
+    $("form").on('submit', function (event) {
         event.preventDefault();
     });
 }
@@ -139,7 +139,7 @@ function submit_del_question(data) {
     $('#preload').removeClass('hidden');
     data = $('#' + data).serializeArray();
     var url = "index.php?action=check_del_question";
-    var success = function(result) {
+    var success = function (result) {
         var json_data = $.parseJSON(result);
         show_status(json_data);
         if (json_data.status) {

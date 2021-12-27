@@ -76,6 +76,13 @@ class Model_Teacher extends Database
         $this->set_query($sql);
         return $this->load_rows();
     }
+    public function getAllExams()
+    {
+        $sql = "SELECT DISTINCT classes.class_id,classes.class_name,grades.detail as grade FROM classes
+        INNER JOIN grades ON grades.grade_id = classes.grade_id ";
+        $this->set_query($sql);
+        return $this->load_rows();
+    }
     public function get_class_detail($class_id)
     {
         $sql = "SELECT DISTINCT students.student_id,students.avatar,students.username,students.name,students.birthday,genders.gender_detail,students.last_login,class_name FROM students

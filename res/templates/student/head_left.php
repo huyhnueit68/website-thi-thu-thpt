@@ -40,6 +40,7 @@
 			<a href="index.php?action=show_dashboard" class="collapsible-header font-color cursor"><i class="material-icons">library_books</i>Làm Đề thi Thử</a>
 			<a href="index.php?action=show_chat" class="collapsible-header font-color cursor"><i class="material-icons">send</i>Trò Chuyện</a>
 			<a href="index.php?action=show_notifications" class="collapsible-header font-color cursor"><i class="material-icons">send</i>Xem Thông Báo</a>
+			<a href="index.php?action=show_feedback" class="collapsible-header font-color cursor"><i class="material-icons">library_books</i>Phản hồi câu hỏi</a>
 			<a href="index.php?action=show_about" class="collapsible-header font-color cursor"><i class="material-icons">insert_comment</i>Liên Hệ</a>
 		</ul>
 	</div>

@@ -25,6 +25,10 @@ class View_Student
 	{
 		include 'res/templates/student/all_chat.html';
 	}
+	public function show_feedback($student_info)
+	{
+		include 'res/templates/shared/feed_back.php';
+	}
 	public function show_notifications()
 	{
 		include 'res/templates/student/notifications.html';

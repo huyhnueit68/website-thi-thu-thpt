@@ -371,6 +371,17 @@ class Controller_Student
 	/**
 	 * CreatedBy: PQ Huy (13.11.2021)
 	 */
+	public function show_feedback()
+	{
+		$view = new View_Student();
+		$view->show_head_left($this->info);
+		$view->show_feedback($this->info);
+		$view->show_foot();
+	}
+
+	/**
+	 * CreatedBy: PQ Huy (13.11.2021)
+	 */
 	public function show_all_chat()
 	{
 		$view = new View_Student();
@@ -378,6 +389,15 @@ class Controller_Student
 		$view->show_all_chat();
 		$view->show_foot();
 	}
+
+	/**
+	 * 
+	 */
+	public function get_list_questions()
+    {
+        $model = new Model_Teacher01();
+        echo json_encode($model->get_list_questions());
+    }
 
 	/**
 	 * CreatedBy: PQ Huy (13.11.2021)

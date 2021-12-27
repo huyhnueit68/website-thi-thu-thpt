@@ -297,16 +297,6 @@ class Controller_Teacher01
     public function get_dashboard_info()
     {
         $model = new Model_Teacher01();
-        // $admin = new stdclass();
-        // $admin->count = $model->get_total_admin();
-        // $admin->name = "Quản Trị Viên";
-        // $admin->icon = "fa-user";
-        // $admin->actionlink = "show_admins_panel";
-        // $teacher = new stdclass();
-        // $teacher->count = $model->get_total_teacher();
-        // $teacher->name = "Giáo Viên";
-        // $teacher->icon = "fa-user";
-        // $teacher->actionlink = "show_teachers_panel";
         $student = new stdclass();
         $student->count = $model->get_total_student();
         $student->name = "Học Sinh";
@@ -1327,6 +1317,16 @@ class Controller_Teacher01
         $view = new View_Teacher01();
         $view->show_head_left($this->info);
         $view->show_notifications_panel();
+        $view->show_foot();
+    }
+    public function show_statistical()
+    {
+        $view = new View_Teacher01();
+        $view->show_head_left($this->info);
+
+        $model = new Model_Teacher01();
+        $all_question = $model->get_list_questions();
+        $view->show_statistical($all_question);
         $view->show_foot();
     }
     public function show_about()
