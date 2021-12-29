@@ -66,19 +66,19 @@ function show_list_tests(data) {
 }
 
 function toggle_status_button(data) {
-    return btn = '<a class="waves-effect waves-light btn" style="margin-bottom: 7px;" onclick="toggle_status(' + data.test_code + ', ' + data.status_id + ')">Đóng/Mở</a>';
+    return btn = '<a class="custom_misa_btn waves-effect waves-light btn" style="margin-bottom: 7px;" title="Đóng/Mở" onclick="toggle_status(' + data.test_code + ', ' + data.status_id + ')">Đóng/Mở</a>';
 }
 
 function accept_permission_button(data) {
-    return btn = '<a class="waves-effect waves-light btn" style="margin-bottom: 7px;" onclick="accept_permission(' + data.test_code + ', ' + data.status_id + ')" style="letter-spacing: unset;">Cho Xem Đáp Án</a>';
+    return btn = '<a class="custom_misa_btn waves-effect waves-light btn" style="margin-bottom: 7px;" title="Cho Xem Đáp Án" onclick="accept_permission(' + data.test_code + ', ' + data.status_id + ')" style="letter-spacing: unset;">Cho Xem Đáp Án</a>';
 }
 
 function test_detail_button(data) {
-    return btn = '<a class="waves-effect waves-light btn" style="margin-bottom: 7px;" href="index.php?action=test_detail&test_code=' + data.test_code + '">Chi Tiết Đề</a>';
+    return btn = '<a class="custom_misa_btn waves-effect waves-light btn" style="margin-bottom: 7px;" title="Chi Tiết Đề" href="index.php?action=test_detail&test_code=' + data.test_code + '">Chi Tiết Đề</a>';
 }
 
 function test_score_button(data) {
-    return btn = '<a class="waves-effect waves-light btn" href="index.php?action=test_score&test_code=' + data.test_code + '">Xem Điểm</a>';
+    return btn = '<a class="custom_misa_btn waves-effect waves-light btn" title="Xem Điểm" href="index.php?action=test_score&test_code=' + data.test_code + '">Xem Điểm</a>';
 }
 
 /**

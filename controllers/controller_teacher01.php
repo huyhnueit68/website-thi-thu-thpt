@@ -1042,7 +1042,7 @@ class Controller_Teacher01
         $result = array();
         $data = $_POST['list_check'];
         $list_check = explode(',', $data);
-        $list_del == '';
+        $list_del = '';
         for ($i = 0; $i < count($list_check) - 1; $i++) {
             $del = $this->del_question($list_check[$i]);
             if (!$del) {

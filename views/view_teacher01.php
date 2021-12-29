@@ -34,6 +34,10 @@ class View_Teacher01
     {
         include 'res/templates/teacher01/classes_panel.html';
     }
+    public function show_admins_panel()
+    {
+        include 'res/templates/admin/admins_panel.html';
+    }
     public function show_students_panel()
     {
         include 'res/templates/teacher01/students_panel.html';

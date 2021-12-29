@@ -39,6 +39,9 @@ class Database
         }
         return $query->fetchAll();
     }
+    public function get_question($id){
+        
+    }
     // hàm thực hiện câu lệnh SQL và trả về 1 đối tượng có các thuộc tính là key
     public function load_row()
     {

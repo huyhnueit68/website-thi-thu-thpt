@@ -791,4 +791,12 @@ body {
 .return-test .custom-width {
     width: 20%;
 }
+
+.custom_misa_btn {
+    min-width: 100px !important;
+    max-width: 100px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /*# sourceMappingURL=style.min.css.map */
